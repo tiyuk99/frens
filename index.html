@@ -10,66 +10,45 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+  <div id="heart-container" class="heart-container" aria-hidden="true"></div>
+
   <div class="page">
     <header class="header">
       <span class="deco deco-left">★</span>
       <h1 class="title">Get to know my frens</h1>
       <span class="deco deco-right">♥</span>
+      <button type="button" id="btn-mute" class="btn-mute" aria-label="Toggle sound" title="Sound on/off">
+        <span class="mute-icon mute-icon--on">🔊</span>
+        <span class="mute-icon mute-icon--off">🔇</span>
+      </button>
     </header>
 
     <main class="main">
-      <section id="form-section" class="window-panel">
+      <section class="window-panel window-panel--game">
+        <span class="corner corner--tl" aria-hidden="true"></span>
+        <span class="corner corner--tr" aria-hidden="true"></span>
+        <span class="corner corner--bl" aria-hidden="true"></span>
+        <span class="corner corner--br" aria-hidden="true"></span>
         <div class="window-title-bar">Questionnaire</div>
-        <form id="questionnaire" class="form">
-          <div class="card">
-            <label for="color">Favorite color</label>
-            <input type="text" id="color" name="color" placeholder="e.g. sky blue" autocomplete="off">
-          </div>
-          <div class="card">
-            <label for="show">Favorite show</label>
-            <input type="text" id="show" name="show" placeholder="movie or series" autocomplete="off">
-          </div>
-          <div class="card">
-            <span class="label">Winter or summer?</span>
-            <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="season" value="winter"> Winter</label>
-              <label class="radio-label"><input type="radio" name="season" value="summer"> Summer</label>
-            </div>
-          </div>
-          <div class="card">
-            <label for="car">Dream car</label>
-            <input type="text" id="car" name="car" placeholder="any vehicle" autocomplete="off">
-          </div>
-          <div class="card">
-            <label for="snack">Favorite snack</label>
-            <input type="text" id="snack" name="snack" placeholder="e.g. chips, fruit" autocomplete="off">
-          </div>
-          <div class="card">
-            <span class="label">Morning or night person?</span>
-            <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="time" value="morning"> Morning</label>
-              <label class="radio-label"><input type="radio" name="time" value="night"> Night</label>
-            </div>
-          </div>
-          <div class="card">
-            <label for="superpower">One superpower you'd want</label>
-            <input type="text" id="superpower" name="superpower" placeholder="e.g. flying, invisibility" autocomplete="off">
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit answers</button>
-          </div>
-        </form>
-      </section>
 
-      <section id="results-section" class="window-panel results-panel" hidden>
-        <div class="window-title-bar">Your answers</div>
-        <div class="results-inner">
-          <ul id="results-list" class="results-list"></ul>
-          <div class="results-actions">
-            <button type="button" id="copy-btn" class="btn btn-primary">Copy results</button>
-            <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
-            <button type="button" id="back-btn" class="btn btn-secondary">Back to form</button>
+        <div class="progress-block">
+          <div id="dog-container" class="dog-container">
+            <div id="progress-dog" class="progress-dog" aria-hidden="true">
+              <span class="progress-dog__body"></span>
+            </div>
           </div>
+          <p id="progress-text" class="progress-text">Question 1 of 7</p>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="step-content" class="step-content"></div>
+
+        <div class="step-actions">
+          <button type="button" id="btn-back" class="btn btn-secondary" hidden>Back</button>
+          <button type="button" id="btn-next" class="btn btn-primary">Next</button>
         </div>
       </section>
     </main>
@@ -78,6 +57,14 @@
       <span class="sparkle">✦</span> made with pixels <span class="sparkle">✦</span>
     </footer>
   </div>
+
+  <audio id="sound-click" preload="auto">
+    <!-- Optional: add src="click.mp3" for click sound -->
+  </audio>
+  <audio id="sound-success" preload="auto">
+    <!-- Optional: add src="success.mp3" for success sound -->
+  </audio>
+
   <script src="script.js" defer></script>
 </body>
 </html>
