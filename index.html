@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get to know my frens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <span class="deco deco-left">★</span>
+      <h1 class="title">Get to know my frens</h1>
+      <span class="deco deco-right">♥</span>
+    </header>
+
+    <main class="main">
+      <section id="form-section" class="window-panel">
+        <div class="window-title-bar">Questionnaire</div>
+        <form id="questionnaire" class="form">
+          <div class="card">
+            <label for="color">Favorite color</label>
+            <input type="text" id="color" name="color" placeholder="e.g. sky blue" autocomplete="off">
+          </div>
+          <div class="card">
+            <label for="show">Favorite show</label>
+            <input type="text" id="show" name="show" placeholder="movie or series" autocomplete="off">
+          </div>
+          <div class="card">
+            <span class="label">Winter or summer?</span>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="season" value="winter"> Winter</label>
+              <label class="radio-label"><input type="radio" name="season" value="summer"> Summer</label>
+            </div>
+          </div>
+          <div class="card">
+            <label for="car">Dream car</label>
+            <input type="text" id="car" name="car" placeholder="any vehicle" autocomplete="off">
+          </div>
+          <div class="card">
+            <label for="snack">Favorite snack</label>
+            <input type="text" id="snack" name="snack" placeholder="e.g. chips, fruit" autocomplete="off">
+          </div>
+          <div class="card">
+            <span class="label">Morning or night person?</span>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="time" value="morning"> Morning</label>
+              <label class="radio-label"><input type="radio" name="time" value="night"> Night</label>
+            </div>
+          </div>
+          <div class="card">
+            <label for="superpower">One superpower you'd want</label>
+            <input type="text" id="superpower" name="superpower" placeholder="e.g. flying, invisibility" autocomplete="off">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit answers</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results-section" class="window-panel results-panel" hidden>
+        <div class="window-title-bar">Your answers</div>
+        <div class="results-inner">
+          <ul id="results-list" class="results-list"></ul>
+          <div class="results-actions">
+            <button type="button" id="copy-btn" class="btn btn-primary">Copy results</button>
+            <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
+            <button type="button" id="back-btn" class="btn btn-secondary">Back to form</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="sparkle">✦</span> made with pixels <span class="sparkle">✦</span>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
