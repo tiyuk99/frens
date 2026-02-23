@@ -18,6 +18,7 @@
       <span class="deco deco-left">★</span>
       <h1 class="title">Get to know my frens</h1>
       <span class="deco deco-right">♥</span>
+      <button type="button" id="btn-home" class="btn-home" aria-label="Return to home" title="Return to home" hidden>Home</button>
       <button type="button" id="btn-mute" class="btn-mute" aria-label="Toggle sound" title="Sound on/off">
         <span class="mute-icon mute-icon--on">🔊</span>
         <span class="mute-icon mute-icon--off">🔇</span>
@@ -32,10 +33,10 @@
         <span class="corner corner--br" aria-hidden="true"></span>
         <div class="window-title-bar">Questionnaire</div>
 
-        <div class="progress-block">
-          <div id="dog-container" class="dog-container">
-            <div id="progress-dog" class="progress-dog" aria-hidden="true">
-              <span class="progress-dog__body"></span>
+        <div id="progress-block" class="progress-block">
+          <div id="character-container" class="character-container">
+            <div id="progress-char" class="progress-char progress-char--dog" aria-hidden="true">
+              <span class="progress-char__sprite"></span>
             </div>
           </div>
           <p id="progress-text" class="progress-text">Question 1 of 7</p>
@@ -55,6 +56,7 @@
 
     <footer class="footer">
       <span class="sparkle">✦</span> made with pixels <span class="sparkle">✦</span>
+      <p class="footer__storage">Saved in this browser only (localStorage).</p>
     </footer>
   </div>
 
